@@ -1,3 +1,5 @@
+#### Note: Just got to know that it has to be uploaded in Github as well, had done this a week before.
+
 ## 🔑 Requirements
 - Python 3.10+
 - Groq API key (free): console.groq.com
