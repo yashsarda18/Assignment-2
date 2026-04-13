@@ -4,11 +4,10 @@
 - `pip install requests pandas scipy matplotlib seaborn openpyxl tqdm`
 
 ## 🚀 How to Run
-1. Open `PART1_Data_Collection.ipynb` in Google Colab
+1. Open `ASSIGNMENT_2.ipynb` in Google Colab
 2. Paste your Groq API key in Cell 2
 3. Run All → downloads dataset
-4. Open `PART2_Analysis_Visualizations.ipynb`
-5. Run All → generates all figures + statistics
+4. Run All → generates all figures + statistics
 
 ## 📊 Models Used
 | Provider | Models |
@@ -39,6 +38,6 @@
 - Collected via Groq API, temperature=0.7, 10+ runs per model
 
 ## 👤 Author
-Student ID: [Your Student ID]
-Course: AI/ML — Assignment 2
-University of Adelaide
+Student ID: a1993661
+Course: Advanced AI/ML — Assignment 2
+Adelaide University
