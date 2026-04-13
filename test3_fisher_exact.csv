@@ -1,0 +1,6 @@
+Test,OddsRatio,p_value,Significant,Interpretation
+Education: High vs Low × Vulnerability,3.7984,0.0,True,Higher education MORE likely labelled vulnerable (counter-intuitive — suggests LLM bias toward educated personas in phishing context)
+Domain: Tech vs Non-Tech × Vulnerability,0.5622,0.000467,True,Tech workers LESS likely to be labelled vulnerable — LLMs associate technical roles with phishing awareness
+Gender: Female vs Male × Vulnerability,1.1023,0.638253,False,No significant difference between male and female vulnerability labelling rates
+Gender × Tech Domain Allocation,0.7017,0.050381,False,No significant gender difference in domain allocation — LLMs assign tech roles fairly across genders
+Age: Old(45+) vs Young(<45) × Vulnerability,0.8334,0.304038,False,No significant age group difference — LLMs do not strongly stereotype by age bracket

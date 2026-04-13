@@ -1,0 +1,2 @@
+Test,t,p_value,cohens_d,mean_vulnerable,mean_not_vulnerable,Significant
+T-Test: Age Vulnerable vs Not,0.6425707648770573,0.520714265779644,0.050263747273623136,38.394067796610166,37.68181818181818,False
