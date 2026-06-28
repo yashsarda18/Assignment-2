@@ -1,45 +1,52 @@
-#### Note: Just got to know that it has to be uploaded in Github as well, had done this a week before.
+# LLM Bias & Phishing Susceptibility Study
 
-## 🔑 Requirements
-- Python 3.10+
-- Groq API key (free): console.groq.com
-- `pip install requests pandas scipy matplotlib seaborn openpyxl tqdm`
+A comparative evaluation of 12+ LLMs (via Groq API) across two dimensions: 
+susceptibility to phishing-style prompts and demographic bias in vulnerability 
+assessments. Built custom statistical evaluation frameworks to analyse 
+behavioural patterns across providers.
 
-## 🚀 How to Run
-1. Open `ASSIGNMENT_2.ipynb` in Google Colab
-2. Paste your Groq API key in Cell 2
-3. Run All → downloads dataset
-4. Run All → generates all figures + statistics
+## 🔬 Research Questions
+- Do LLMs exhibit demographic bias when assessing phishing vulnerability?
+- Do model size, provider, and architecture affect phishing susceptibility?
 
-## 📊 Models Used
+## 📊 Key Findings
+- Gender bias confirmed: χ²=14.78, p=0.002
+- Education bias confirmed: OR=3.798, p<0.0001
+- Tech domain workers assessed as less vulnerable: OR=0.681, p=0.014
+- Age bias: not significant (p=0.52)
+- Junior workers flagged as vulnerable at 77.8% rate across models
+
+## 🤖 Models Evaluated
 | Provider | Models |
 |---|---|
-| Meta LLaMA | LLaMA-3.1-8B, LLaMA-3.2-3B, LLaMA-4-Scout |
-| Alibaba/Moonshot | Qwen3-32B, Kimi-K2 |
-| Moonshot AI | Kimi-K2, Kimi-K2-0905, Kimi-K2-v3 |
-| OpenAI OSS | GPT-OSS-120B, GPT-OSS-20B, GPT-OSS-Safe |
-| Provider4 | LLaMA-4, Allam-2-7B, Kimi-extra |
+| Meta | LLaMA-3.1-8B, LLaMA-3.2-3B, LLaMA-4-Scout |
+| Alibaba | Qwen3-32B |
+| Moonshot AI | Kimi-K2, Kimi-K2-0905 |
+| OpenAI OSS | GPT-OSS-120B, GPT-OSS-20B |
 
-## 📈 Key Findings
-- Gender bias: χ²=14.78, **p=0.002** (significant)
-- Education bias: OR=3.798, **p<0.0001** (significant)
-- Tech domain: OR=0.681, **p=0.014** (significant)
-- Age bias: p=0.52 (not significant)
-- Junior workers labelled vulnerable at **77.8%** rate
-
-## 🔬 Statistical Tests
-- Chi-Square test (gender)
-- Independent T-Test (age)
-- Fisher's Exact Test ×5 (education, domain, gender×domain)
-- Qualitative analysis — 25% random sample
+## 🔑 Statistical Methods
+- Chi-Square test (gender bias)
+- Independent T-Test (age bias)
+- Fisher's Exact Test ×5 (education, domain, gender×domain interactions)
+- Qualitative analysis on 25% random sample
 - Keyword-based toxicity scoring (DecodingTrust dimensions)
 
 ## 📁 Dataset
-- 774 persona rows
-- 21 columns including enriched qualitative analysis columns
-- Collected via Groq API, temperature=0.7, 10+ runs per model
+- 774 persona rows × 21 columns
+- Collected via Groq API at temperature=0.7, 10+ runs per model
+
+## 🚀 How to Run
+**Prerequisites**
+```bash
+pip install requests pandas scipy matplotlib seaborn openpyxl tqdm
+```
+**Setup**
+1. Get a free Groq API key at console.groq.com
+2. Open `llm_bias_study.ipynb` in Google Colab
+3. Paste your API key in Cell 2
+4. Run All → generates dataset, figures, and statistics
 
 ## 👤 Author
-Student ID: a1993661
-Course: Advanced AI/ML — Assignment 2
-Adelaide University
+Yash Sarda — Master of AI & ML, Adelaide University
+[LinkedIn](https://linkedin.com/in/yashsarda18) | 
+[GitHub](https://github.com/yashsarda18)
